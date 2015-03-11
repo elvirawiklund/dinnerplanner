@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <style>
+	div.Loading {
+	opacity: 0.8;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	position: fixed;
+	}
+	
+	div.Error {
+	display:none;
+	opacity: 0.8;
+	background: black;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	position: fixed;
+	}
+	  
+  </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/mainController.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+	<script src="js/view/dishSelectViewController.js"></script>
+	<script src="js/view/dishSelectView.js"></script>
+	<script src="js/view/selectedDishView.js"></script>
+	<script src="js/view/selectedDishViewController.js"></script>
+	<script src="js/view/menuView.js"></script>
+	<script src="js/view/menuViewController.js"></script>
+	<script src="js/view/finalView.js"></script>
+	<script src="js/view/finalViewController.js"></script>
+    
+    
+    <title>Elins & Elviras</title> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+
+	<div class="container" style=width:100%;>
+
+
+	<div class="Loading" ></br><center><h2>Loading...</h2></br><img src='https://www.google.se/search?q=.gif&client=ubuntu&hs=YRw&channel=fs&tbm=isch&imgil=kJbhn6B6aZ657M%253A%253BAGroEeRFje6A0M%253Bhttp%25253A%25252F%25252Fosxdaily.com%25252F2013%25252F07%25252F25%25252Fsend-receive-animated-gifs-iphone%25252F&source=iu&pf=m&fir=kJbhn6B6aZ657M%253A%252CAGroEeRFje6A0M%252C_&usg=__zTEcGQDrYNjzMNnIZYHiPgT6fYc%3D&biw=1583&bih=862&ved=0CD0Qyjc&ei=c8z5VLmoKsW-PLL8gfgG#imgrc=kJbhn6B6aZ657M%253A%3BAGroEeRFje6A0M%3Bhttp%253A%252F%252Fcdn.osxdaily.com%252Fwp-content%252Fuploads%252F2013%252F07%252Fdancing-banana.gif%3Bhttp%253A%252F%252Fosxdaily.com%252F2013%252F07%252F25%252Fsend-receive-animated-gifs-iphone%252F%3B365%3B360'/></center></div>
+	<div class="Error"><center></br><h2>Error, check your internet connection!</h2></center></div>
+
+		<div id="exampleView">
+			<div class="row" style= "font-size: 100pt; font-family: Chalkboard; background-color:#FF8C7A;">
+	 			<h1><span style= "font-size: 45pt; font-family: Chalkboard; background-color:#FF8C7A; margin-left:5%">HOMELETTE </span> <span style= "font-size: 20pt"><em> From the best chefs in the world directly into your kitchen</em></span></h1>
+				</div>
+
+
+
+		<div class="row" id="Full2">
+
+			<div class="row" id="page1" style="background:url('images/dinner.jpg') no-repeat; background-size:cover; padding-bottom:30px;">
+  				<div class="col-md-12" style="border-top:solid;">
+  					<div class="row">
+  						<div class="col-md-4" style="background:rgba(211,211,211,.8); margin-top:15%; margin-left:4%; margin-bottom:5%;">
+	  						<h2 style="margin-left:3%;">A Home Dinner Service</h2>
+	  						<h4 style="margin-left:3%;">text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+					text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+					text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+					text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+					text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+					text text text text text text text text </br></br>Start quickly</h4>
+	  						<button id="Start" class="btn btn-default" style="margin-left:3%; margin-bottom:1%; border:solid;
+	  						border-width:2px; background-color:#FF8C7A;">
+	  						<h2>Create new dinner</h2></button>
+  						</div>
+  					</div>
+  				</div>		
+			</div>
+
+  			<div class="col-md-2" style="border-style:solid; border-color:#fff; font-size: 13pt; background:#FFEEEB; height: 800px" id="SideBar"><h3 style="font-family: Chalkboard">My Dinner</h3>
+  				<div style="font-family: Chalkboard">Guests: <span id="numberOfGuests"></span>
+
+					<div>
+					
+         		 	<button id="minusGuest" class="btn minus"><span class="glyphicon glyphicon-minus"></span></button>
+         		 	<button id="plusGuest" class="btn plus"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
+
+				</div>
+				
+				<div class="row" style="margin-top:5%; margin-bottom:5%;">
+				<div class="col-md-12" style="background-color:#ffffff; ">
+				<div class="col-md-8" style="font-family:Comic Sans MS">Dish Name</div>
+				<div class="col-md-4" style="font-family:Comic Sans MS">Cost</div></div>
+				</div>
+				<div class="row">
+				<div class="col-md-12" style="background:#FFF; font-family:Comic Sans MS">
+
+				<div class="col-md-11" style="margin-left:-25px;"><span id="dishName"></span></div>
+				<div class="col-md-1"><span id="priceDish"></span></div>
+
+				</div>
+				
+				</div>
+				
+				
+				<h4 style="font-family: Chalkboard">SEK <span id="totalPrice" style="float:right; margin-right:23px;"></span></h4>
+				
+				<div class="row" style="margin-top:10%; margin-bottom:120%;">
+				<div class="col-md-10">
+				<center>
+					<button id='Confirm' type="button" class="btn btn-default" style= "font-size: 15pt; margin-left:auto;margin-right:auto">Confirm dinner</button></div>
+				</center>
+				</div>
+				
+
+			</div>
+  			
+  			<div class="col-md-10" id="dishSelectView">
+
+  				<div class="row" id="AllDishes">
+  					<div class="col-md-12" style="background:#FFEEEB; border-top:solid; border-color:#fff; border-bottom:solid; border-color:#fff; " id="DishType"><h3 style="font-family: Chalkboard">SELECT DISH</h3>
+
+  					<div class="row" style="margin-top:2%; margin-bottom:2%;" id="PresentedDishes">
+
+  						<div class="col-md-4">
+	    						<div class="input-group">
+	      							<input id="search" type="text" class="form-control" placeholder="Enter key words">
+	      							<span class="input-group-btn">
+	        							<button id="searchbutton" class="btn btn-default" type="button">Search</button>
+	      							</span>
+	   		 					</div>
+							</div>
+
+
+  						
+
+  						<!--div class="col-md-4">
+							<select class="form-control" multiple="multiple">
+							  <option class="dropdown" id='starter'>Starter</option>
+							  <option class="dropdown" id='main'>Main</option>
+							  <option class="dropdown" id='dessert'>Dessert</option>
+							</select>
+						</div-->
+					</div>
+
+
+  					</div>
+  					<div class="col-md-12">
+						<span id="preSearch"><h5>Search for a recipe above^</h5></span>
+  						<span id="Dishes"></span>
+  					</div>
+  					</div>
+				</div>
+			
+
+			<div class="col-md-9" id="specificDish">
+
+  				<div class="row">
+
+  					<div class="col-md-12" id="selectedDishView">
+
+  					<span id="Dish"></span>
+
+  					</div>
+  				</div>
+			</div>
+
+			<div id="menuView">
+			<div id="secondHeader" class="col-md-12" style="border-bottom:solid; border-top:solid; border-color:#FFF; background:#FFEEEB;">
+  				<div class="row">
+  					<div class="col-md-9">
+  						<h2>My Dinner: <span id="numberOfGuestsMenu"></span> people</h2>
+  					</div>
+			
+
+					<div class="col-md-3">
+						<button id='back' class='btn btn-default' type='submit' style='background:#FFF; border:solid;
+  					border-width:2px; margin-bottom:5px; margin-top:15px;'>
+						Go back and edit dinner
+						</button>
+					</div>
+				</div>
+
+					</div>
+					<div class="row" id="presentedMenu">
+		 
+						<div class="col-md-12" style="margin-top:5%;">
+							<span id="ChosenMenu"></span>
+						</div>
+
+					</div>
+					<div class="row" id="finalMenu" style="display:none;">
+						<div class="col-md-12" id="finalView" style="margin-top:5%;">
+							<span id="ChosenMenu"></span>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  </body>
+</html>
